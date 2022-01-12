@@ -5,9 +5,15 @@ on: push
 jobs:
  test:
   runs-on: ubuntu-latest
-  steps: 
+  
+  steps:
+    - run : | 
+       env | sort
+       ls -al
     - uses: actions/checkout@v2
-    - run: python hello.py
+    - run: |
+       cat hello.py
+       python hello.py
    
  build:
   needs: [test]
