@@ -12,6 +12,7 @@ jobs:
        ls -al
     - uses: actions/checkout@v2
     - run: |
+       ls -al
        cat hello.py
        python hello.py
    
